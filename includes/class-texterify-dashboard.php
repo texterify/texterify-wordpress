@@ -3,13 +3,15 @@
 class Texterify_Dashboard {
     function render_plugin_settings_page() {
         ?>
-        <h2>Texterify Settings</h2>
-        <form action="options.php" method="post">
-            <?php
-            settings_fields( 'dbi_example_plugin_options' );
-            do_settings_sections( 'dbi_example_plugin' ); ?>
-            <input name="submit" class="button button-primary" type="submit" value="<?php esc_attr_e( 'Save' ); ?>" />
-        </form>
+        <div class="wrap">
+            <h1>Texterify Settings</h1>
+            <form action="options.php" method="post">
+                <?php
+                settings_fields( 'dbi_example_plugin_options' );
+                do_settings_sections( 'dbi_example_plugin' ); ?>
+                <input name="submit" class="button button-primary" type="submit" value="<?php esc_attr_e( 'Save' ); ?>" />
+            </form>
+        </div>
         <?php
     }
 
