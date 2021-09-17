@@ -3,24 +3,37 @@
 class Texterify_Dashboard {
     function render_plugin_settings_page() {
         ?>
-        <div class="wrap">
+        <div class="wrap texterify-dashboard">
             <h1>Texterify Settings</h1>
-            <form action="options.php" method="post">
-                <?php
-                settings_fields( 'dbi_example_plugin_options' );
-                do_settings_sections( 'dbi_example_plugin' ); ?>
-                <input name="submit" class="button button-primary" type="submit" value="<?php esc_attr_e( 'Save' ); ?>" />
-            </form>
+            <table class="form-table">
+                <tbody>
+                <tr>
+                    <th>
+                        <h2>Authorization secret</h2>
+                        <div class="secret-description">Use this value to allow Texterify to synchronize content with your site.</div>
+                    </th>
+                    <td>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </div>
         <?php
     }
 
-    public function dashboar_menu() {
+    public function dashboard_scripts() {
+        wp_register_style('texterify-dashboard-page', TEXTERIFY_URL . 'public/css/texterify-dashboard.css');
+        wp_enqueue_style('texterify-dashboard-page');
+    }
+
+    public function dashboard_menu() {
         add_options_page('Texterify', 'Texterify', 'manage_options', 'texterify', array($this, 'render_plugin_settings_page'));
     }
 
     public function register() {
         # Add settings menu item.
-        add_action('admin_menu', array($this, 'dashboar_menu'));
+        add_action('admin_menu', array($this, 'dashboard_menu'));
+
+        add_action('admin_enqueue_scripts', array($this, 'dashboard_scripts'));
     }
 }

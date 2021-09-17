@@ -35,7 +35,11 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'TEXTERIFY_VERSION', '1.0.0' );
+define('TEXTERIFY_VERSION', '1.0.0');
+
+define('TEXTERIFY_FILE', __FILE__);
+define('TEXTERIFY_DIR', plugin_dir_path(TEXTERIFY_FILE));
+define('TEXTERIFY_URL', plugin_dir_url(TEXTERIFY_FILE));
 
 /**
  * The code that runs during plugin activation.
@@ -74,6 +78,8 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-texterify.php';
  * @since    1.0.0
  */
 function run_texterify() {
+    global $wpdb;
+	// $results = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = '_pll_strings_translations'", OBJECT);
 
 	$plugin = new Texterify();
 	$plugin->run();
