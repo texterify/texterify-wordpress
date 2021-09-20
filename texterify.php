@@ -68,6 +68,16 @@ register_deactivation_hook( __FILE__, 'deactivate_texterify' );
  */
 require plugin_dir_path( __FILE__ ) . 'includes/class-texterify.php';
 
+function polylang_language_show_in_rest_taxonomy_args($args, $taxonomy, $object_type) {
+	$taxonomies = array('language');
+
+	if (in_array($taxonomy, $taxonomies)) {
+		$args['show_in_rest'] = true;
+	}
+
+	return $args;
+}
+
 /**
  * Begins execution of the plugin.
  *
@@ -83,5 +93,9 @@ function run_texterify() {
 	$plugin = new Texterify();
 	$plugin->run();
 
+	// Polylang does not set "show_in_rest" which is required to get the language of posts and pages.
+	// https://wordpress.org/support/topic/how-to-know-the-language-of-a-post-through-the-wordpress-rest-api/
+	add_filter('register_taxonomy_args', 'polylang_language_show_in_rest_taxonomy_args', 10, 3);
 }
+
 run_texterify();
