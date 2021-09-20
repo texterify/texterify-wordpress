@@ -79,7 +79,6 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-texterify.php';
  */
 function run_texterify() {
     global $wpdb;
-	// $results = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = '_pll_strings_translations'", OBJECT);
 
 	$plugin = new Texterify();
 	$plugin->run();
