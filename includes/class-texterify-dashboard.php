@@ -17,10 +17,15 @@ class Texterify_Dashboard {
 
         ?>
         <div class="wrap texterify-dashboard">
-            <h1>Texterify Settings</h1>
+            <h1>Texterify Dashboard</h1>
+            <p>
+                Welcome to your Texterify Wordpress Dashboard.
+                <br/>
+                To sync your Wordpress content with Texterify check out the following guide: <a href="https://docs.texterify.com/integrations/wordpress">Wordpress integration guide</a>.
+            </p>
             <table class="form-table">
                 <tbody>
-                <tr>
+                    <!-- <tr>
                         <th>
                             <h2>Authorization secret</h2>
                             <div class="description">Use this value to allow Texterify to synchronize content with your site.</div>
@@ -32,7 +37,7 @@ class Texterify_Dashboard {
                             <a class="secret-generate-new" href="">Generate new secret</a>
                         </div>
                         </td>
-                    </tr>
+                    </tr> -->
                     <tr>
                         <th>
                             <h2>Debug output</h2>
