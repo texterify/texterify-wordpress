@@ -2,6 +2,7 @@
 
 require_once plugin_dir_path( __FILE__ ) . 'class-texterify-dashboard.php';
 require_once plugin_dir_path( __FILE__ ) . 'class-texterify-notice.php';
+require_once plugin_dir_path( __FILE__ ) . 'class-texterify-rest-controller.php';
 
 /**
  * Register all actions and filters for the plugin
@@ -132,6 +133,10 @@ class Texterify_Loader {
 
         $notice = new Texterify_Notice();
         $notice->register();
-    }
 
+        add_action('rest_api_init', function () {
+            $rest = new Texterify_REST_Controller();
+            $rest->register_routes();
+        });
+    }
 }
