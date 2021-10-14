@@ -19,9 +19,9 @@ class Texterify_Dashboard {
         <div class="wrap texterify-dashboard">
             <h1>Texterify Dashboard</h1>
             <p>
-                Welcome to your Texterify Wordpress Dashboard.
+                Welcome to your Texterify WordPress Dashboard.
                 <br/>
-                To sync your Wordpress content with Texterify check out the following guide: <a href="https://docs.texterify.com/integrations/wordpress">Wordpress integration guide</a>.
+                To sync your WordPress content with Texterify check out the following guide: <a href="https://docs.texterify.com/integrations/wordpress">WordPress integration guide</a>.
             </p>
             <table class="form-table">
                 <tbody>
@@ -38,7 +38,7 @@ class Texterify_Dashboard {
                         </div>
                         </td>
                     </tr> -->
-                    <tr>
+                    <!-- <tr>
                         <th>
                             <h2>Debug output</h2>
                             <div class="description">This section is just for debugging purposes.</div>
@@ -50,7 +50,7 @@ class Texterify_Dashboard {
                                 ?>
                             </div>
                         </td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
