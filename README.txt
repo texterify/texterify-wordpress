@@ -1,9 +1,10 @@
-=== Plugin Name ===
+=== Texterify ===
 Contributors: texterify
 Donate link: https://texterify.com
 Tags: texterify, texterify app, translation, localization, localize, localize mobile apps, localization app, l10n, i18n, translate
 Requires at least: 5.8.1
 Tested up to: 5.8.1
+Requires PHP: 5.4.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -28,6 +29,8 @@ _The plugin relys on a third party as a service. To use this plugin an account i
 For detailed information on how to set up the integration and how it works take a look at our [WordPress integration guide](https://docs.texterify.com/integrations/wordpress).
 
 == Screenshots ==
+
+== Upgrade Notice ==
 
 == Changelog ==
 
