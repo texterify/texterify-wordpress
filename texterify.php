@@ -45,7 +45,7 @@ define('TEXTERIFY_URL', plugin_dir_url(TEXTERIFY_FILE));
  * The code that runs during plugin activation.
  * This action is documented in includes/class-texterify-activator.php
  */
-function activate_texterify() {
+function texterify_activate() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-texterify-activator.php';
 	Texterify_Activator::activate();
 }
@@ -54,13 +54,13 @@ function activate_texterify() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-texterify-deactivator.php
  */
-function deactivate_texterify() {
+function texterify_deactivate() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-texterify-deactivator.php';
 	Texterify_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_texterify' );
-register_deactivation_hook( __FILE__, 'deactivate_texterify' );
+register_activation_hook( __FILE__, 'texterify_activate' );
+register_deactivation_hook( __FILE__, 'texterify_deactivate' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -68,7 +68,7 @@ register_deactivation_hook( __FILE__, 'deactivate_texterify' );
  */
 require plugin_dir_path( __FILE__ ) . 'includes/class-texterify.php';
 
-function polylang_language_show_in_rest_taxonomy_args($args, $taxonomy, $object_type) {
+function texterify_polylang_language_show_in_rest_taxonomy_args($args, $taxonomy, $object_type) {
 	$taxonomies = array('language');
 
 	if (in_array($taxonomy, $taxonomies)) {
@@ -95,7 +95,7 @@ function run_texterify() {
 
 	// Polylang does not set "show_in_rest" which is required to get the language of posts and pages.
 	// https://wordpress.org/support/topic/how-to-know-the-language-of-a-post-through-the-wordpress-rest-api/
-	add_filter('register_taxonomy_args', 'polylang_language_show_in_rest_taxonomy_args', 10, 3);
+	add_filter('register_taxonomy_args', 'texterify_polylang_language_show_in_rest_taxonomy_args', 10, 3);
 }
 
 run_texterify();
