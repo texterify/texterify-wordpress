@@ -16,13 +16,14 @@ Never worry again about WordPress website translation and multilingual content m
 Manage your multilingual WordPress content with ease by integrating with the modern translation and localization management system Texterify. Professional features help you to translate your content hassle-free and with less errors. Publish your content easily in multiple languages.
 
 A selection of features Texterify offers:
+
 * Machine translation to translate your content automatically into different languages
 * Advanced search and filter possibilities
 * Translation history to keep an eye on the past
 * Fine-grained permission management
 * and many more
 
-_The plugin relys on a third party as a service. To use this plugin an account is required on [https://app.texterify.com](https://app.texterify.com) or on your personal Texterify instance.
+_The plugin relys on a third party as a service. To use this plugin an account is required on [https://app.texterify.com](https://app.texterify.com) or on your personal Texterify instance._
 
 == Frequently Asked Questions ==
 
