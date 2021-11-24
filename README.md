@@ -2,9 +2,9 @@
 
 [![Build Status](https://travis-ci.org/texterify/texterify-wordpress.svg?branch=master)](https://travis-ci.org/texterify/texterify-wordpress) [![License](https://img.shields.io/github/license/texterify/texterify-wordpress.svg)](https://img.shields.io/github/license/texterify/texterify-wordpress.svg) [![Open Issues](https://img.shields.io/github/issues-raw/texterify/texterify-wordpress.svg)](https://img.shields.io/github/issues-raw/texterify/texterify-wordpress.svg)
 
-**Official VSC extension to interact with Texterify.**
+**Official WordPress plugin to interact with Texterify.**
 
-This extension allows you to add keys and download your translations without leaving your editor.
+This extension allows you to sync content between Texterify and WordPress.
 
 For more information about Texterify visit https://github.com/texterify/texterify.
 
